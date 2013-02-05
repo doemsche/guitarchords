@@ -12,7 +12,7 @@
     // and ensure that each todo created has `title` and `completed` keys.
     defaults: {
       title: '',
-      children: [],
+      children: '',
       root: 0
     }
 

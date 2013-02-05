@@ -8,20 +8,43 @@
 </head>
 <body>
 
-
+  <!-- remote js -->
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.9/backbone-min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.0/backbone.localStorage-min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.9/backbone-min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.0/backbone.localStorage-min.js"></script>
 
   
-
-
-
+  <!-- local js -->
   <script src="js/models/chord.js"></script>
+
+  <script type="text/template" id="chord-template">
+    <div class="view">
+      <input class="edit" value="<%= title %>">
+    </script>
+
+
+
+  <script src="js/collections/chords.js"></script>
+  <script src="js/views/chord.js"></script>
   <script src="js/views/mapp.js"></script>
+  <script src="js/mapp.js"></script>
 
 
+ <section id="fretboard">
+    <header id="header">
+      <h1>Chord</h1>
+      <input id="new-todo" placeholder="What needs to be done?" autofocus>
+    </header>
+    <section id="main">
+      <input id="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark all as complete</label>
+      <ul id="todo-list"></ul>
+    </section>
+    <footer id="footer">
+        <ul id="chord-list"></ul>
+    </footer>
+  </section>
 
 
   
