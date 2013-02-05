@@ -29,6 +29,9 @@
     // updates the reference to the todo's edit input within the view.
     render: function() {
       this.$el.html( this.template( this.model.toJSON() ) );
+      console.log(this)
+      return this;
+
     },
 
     //remove

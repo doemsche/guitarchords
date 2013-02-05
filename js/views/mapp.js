@@ -23,7 +23,6 @@
 	    // of the app doesn't change.
 	    render: function() {
 	      if ( mapp.Chords.length ) {
-          console.log("render list")
 	      	//render myChords from localStorage in footer
 	        	this.$footer.html();
 			   }
@@ -32,11 +31,14 @@
 		addOne: function( chord ) {
 	      var view = new mapp.ChordView({ model: chord });
 	      $('#chord-list').append( view.render().el );
+          //jtab.render(this.$el,this.model.get('title'))
 	    },
 
     // Add all items in the **Todos** collection at once.
     addAll: function() {
       this.$('#chord-list').html('');
+      console.log(this.$('#chord-list'));
+      console.log(mapp.Chords.length)
       mapp.Chords.each(this.addOne, this);
       }
   });
